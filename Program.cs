@@ -13,6 +13,7 @@ namespace ConsoleApp
              bool underage = false;
              char rating;
              double hours;
+             double rate;
              decimal cost;
              
             Console.WriteLine("********Welcome to Enterprice car rentals*********");
@@ -29,23 +30,33 @@ namespace ConsoleApp
                  switch (Console.ReadLine())
                  {
                     case "1" :  Console.WriteLine("Rent for Hatchback is $2/Hr\nIf you are okay please  enter number of hours you need: ");
+                                    rate = 2;
                                  hours =Convert.ToDouble(Console.ReadLine());
                                  //Console.WriteLine(hours*2);
-                                 cost = (decimal)(hours*2);
-                                 Console.WriteLine($"the cost for {hours} is ${cost}");
+                                 cost = (decimal)TotalCost(hours,rate);
+                                 Console.WriteLine($"the cost of Hatchback for {hours} hours is ${cost}");
                                  
 
                                  break;
 
                      default: break;
-                 }        
+                 } 
+                 Console.WriteLine("Thank you for choosing Enterprice please rate us on 1-10 scale");   
+                 rating = (char)Convert.ToInt32(Console.ReadLine());   
+                  Console.WriteLine($"Thank you for rating us {rating} Have a great trip!!!!");
               return;
             }
             }
-            Console.WriteLine($"Sorry {name},we Dont rent cars for age under 25\nThankyou for contacting Enterprice");
+            
 
+            else{
+            Console.WriteLine($"Sorry {name},we Dont rent cars for age under 25\nThankyou for contacting Enterprice");
+            }
 
             
+            }
+            static double TotalCost(double hours , double rate){
+                return hours*rate;
             }
         }
     }

@@ -28,7 +28,7 @@ namespace ConsoleApp
                 {
                     Console.WriteLine($"Hello Mr.{name} please select the type of cars you want to rent: \n1.Hatchback \n2.Sedan \n3.SUV\n4.Crossover \n5.Coupe ");
                     select = Convert.ToChar(Console.ReadLine());
-                    if(select== '1' || select== '2' || select== '3' || select== '4') {
+                    if(select== '1' || select== '2' || select== '3' || select== '4' || select== '5') {
                         switch (select) {
                             case '1' :  Console.WriteLine("Rent for Hatchback is $2/Hr\nIf you are okay please  enter number of hours you need: ");
                                     rate = 2;

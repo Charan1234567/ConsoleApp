@@ -1,2 +1,2 @@
 # ConsoleApp for car rentals
-![Screenshot](../master/ConsoleApp/IMAGE.png)
+![Screenshot](../master/screenshot.png)
